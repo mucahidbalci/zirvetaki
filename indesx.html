@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ZirveTakı — Erkek Saat, Gözlük ve Aksesuar</title>
+<meta name="description" content="ZirveTakı: premium erkek kol saatleri, güneş gözlükleri, imaj gözlükleri ve aksesuar. Kapıda ödeme, hızlı kargo, güvenli Shopier altyapısı.">
+<meta name="theme-color" content="#0b0b0d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0d;
+  --bg-2:#101013;
+  --panel:#141418;
+  --line:rgba(244,241,234,.10);
+  --line-2:rgba(244,241,234,.18);
+  --ink:#f4f1ea;
+  --muted:#8e8a83;
+  --gold:#c9a86a;
+  --gold-dim:#8a7448;
+  --radius:2px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --pad:18px;
+  --header-h:62px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:300;font-size:15px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:calc(66px + env(safe-area-inset-bottom));
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--gold);color:#0b0b0d}
+
+.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;letter-spacing:.01em}
+.eyebrow{
+  font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;
+}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+
+/* ---------- ribbon ---------- */
+.ribbon{
+  background:linear-gradient(90deg,#171310,#221b12,#171310);
+  border-bottom:1px solid var(--line);
+  font-size:11.5px;letter-spacing:.06em;text-align:center;
+  color:#d8c9a9;padding:7px 34px 7px 14px;position:relative;
+}
+.ribbon b{color:var(--gold);font-weight:500}
+.ribbon button{
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  width:24px;height:24px;display:grid;place-items:center;opacity:.6;
+}
+.ribbon button:hover{opacity:1}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(11,11,13,.82);
+  backdrop-filter:blur(18px) saturate(150%);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  border-bottom:1px solid var(--line);
+}
+.bar{display:flex;align-items:center;justify-content:space-between;height:var(--header-h)}
+.brand{display:flex;flex-direction:column;line-height:1}
+.brand .mark{
+  font-family:"Cormorant Garamond",serif;font-size:23px;font-weight:500;
+  letter-spacing:.19em;text-transform:uppercase;
+}
+.brand .sub{
+  font-size:8px;letter-spacing:.4em;text-transform:uppercase;
+  color:var(--muted);margin-top:5px;
+}
+.bar-actions{display:flex;align-items:center;gap:10px}
+.icon-btn{
+  width:38px;height:38px;display:grid;place-items:center;
+  border:1px solid var(--line);border-radius:50%;
+  transition:border-color .3s var(--ease),background .3s var(--ease);
+}
+.icon-btn:hover{border-color:var(--gold);background:rgba(201,168,106,.08)}
+.icon-btn svg{width:16px;height:16px;stroke:var(--ink);fill:none;stroke-width:1.6}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.42;filter:grayscale(.25) contrast(1.05)}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(11,11,13,.55) 0%,rgba(11,11,13,.78) 55%,var(--bg) 100%);
+}
+.hero-inner{position:relative;padding:56px 0 44px}
+.hero h1{
+  font-family:"Cormorant Garamond",serif;font-weight:300;
+  font-size:clamp(38px,11vw,74px);line-height:1.02;
+  letter-spacing:-.015em;margin:16px 0 0;
+}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p.lead{
+  color:#c3bfb7;max-width:38ch;margin-top:18px;font-size:14.5px;
+}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:15px 26px;font-size:11.5px;font-weight:500;
+  letter-spacing:.17em;text-transform:uppercase;
+  border:1px solid transparent;transition:all .35s var(--ease);
+}
+.btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.7}
+.btn-gold{background:var(--gold);color:#0b0b0d}
+.btn-gold:hover{background:#dcc08b;transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line-2);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* hero mini strip */
+.hero-strip{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:var(--line);border-top:1px solid var(--line);
+}
+.hero-strip div{
+  background:var(--bg);padding:14px 12px;text-align:center;
+  font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+}
+.hero-strip svg{width:17px;height:17px;margin:0 auto 7px;stroke:var(--gold);fill:none;stroke-width:1.4;display:block}
+
+/* ---------- campaign ---------- */
+.campaign{
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(120% 140% at 0% 0%,rgba(201,168,106,.10),transparent 60%),
+    var(--bg-2);
+}
+.campaign-in{display:flex;align-items:center;gap:14px;padding:22px 0}
+.campaign .num{
+  font-family:"Cormorant Garamond",serif;font-size:34px;line-height:1;
+  color:var(--gold);white-space:nowrap;
+}
+.campaign h3{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:500}
+.campaign p{font-size:12.5px;color:var(--muted);margin-top:4px}
+
+/* ---------- catalog ---------- */
+.catalog{padding:34px 0 10px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px}
+.sec-head h2{font-family:"Cormorant Garamond",serif;font-size:clamp(27px,7vw,40px);font-weight:300;line-height:1.05}
+.sec-head .count{font-size:11px;letter-spacing:.15em;color:var(--muted);white-space:nowrap;padding-bottom:6px}
+
+.toolbar{
+  position:sticky;top:var(--header-h);z-index:50;
+  background:rgba(11,11,13,.94);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+  padding:12px 0;
+  margin:0 calc(var(--pad) * -1);
+  padding-left:var(--pad);padding-right:var(--pad);
+}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{
+  flex:0 0 auto;padding:9px 15px;font-size:11px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--muted);
+  border:1px solid var(--line);white-space:nowrap;
+  transition:all .3s var(--ease);
+}
+.chip:hover{color:var(--ink);border-color:var(--line-2)}
+.chip[aria-selected="true"]{background:var(--gold);border-color:var(--gold);color:#0b0b0d}
+.search{
+  display:flex;align-items:center;gap:10px;margin-top:11px;
+  border:1px solid var(--line);padding:0 13px;background:rgba(255,255,255,.02);
+}
+.search svg{width:15px;height:15px;stroke:var(--muted);fill:none;stroke-width:1.6;flex:0 0 auto}
+.search input{
+  flex:1;background:none;border:0;outline:0;color:var(--ink);
+  font-size:13px;padding:12px 0;
+}
+.search input::placeholder{color:#5e5b56}
+
+.grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-top:22px;
+}
+.card{
+  background:var(--bg);position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+  animation:in .5s var(--ease) both;
+}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.thumb{position:relative;aspect-ratio:4/5;overflow:hidden;background:#16161a}
+.thumb img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .8s var(--ease),filter .5s;
+  filter:saturate(.94);
+}
+.card:hover .thumb img{transform:scale(1.055);filter:saturate(1)}
+.badge{
+  position:absolute;top:9px;left:9px;z-index:2;
+  font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+  padding:4px 8px;background:var(--gold);color:#0b0b0d;font-weight:600;
+}
+.badge.dark{background:rgba(11,11,13,.85);color:var(--ink);border:1px solid var(--line-2)}
+.card-body{padding:12px 11px 15px;display:flex;flex-direction:column;flex:1}
+.card-body h3{
+  font-size:11.5px;font-weight:400;line-height:1.45;letter-spacing:.02em;
+  color:#ded9d0;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  min-height:33px;
+}
+.price{display:flex;align-items:baseline;gap:7px;margin-top:9px}
+.price .now{font-size:13.5px;font-weight:500;letter-spacing:.02em}
+.price .old{font-size:11px;color:var(--muted);text-decoration:line-through}
+.card .go{
+  margin-top:auto;padding-top:10px;
+  font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--gold);display:flex;align-items:center;gap:6px;
+  opacity:.85;transition:gap .3s var(--ease),opacity .3s;
+}
+.card:hover .go{gap:11px;opacity:1}
+.card .go svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:1.8}
+
+.more{display:flex;justify-content:center;margin:26px 0 6px}
+.more .btn{min-width:230px}
+
+.empty{
+  text-align:center;padding:56px 18px;border:1px dashed var(--line-2);
+  margin-top:22px;
+}
+.empty p{color:var(--muted);font-size:13px;margin-top:8px}
+
+/* ---------- story ---------- */
+.story{border-top:1px solid var(--line);margin-top:44px;padding:48px 0;background:var(--bg-2)}
+.story-grid{display:grid;gap:26px}
+.story h2{font-family:"Cormorant Garamond",serif;font-size:clamp(26px,7vw,38px);font-weight:300;line-height:1.1}
+.story p{color:#b6b2aa;font-size:14px;margin-top:14px}
+.story ul{list-style:none;margin-top:22px;display:grid;gap:12px}
+.story li{
+  display:flex;gap:12px;align-items:flex-start;
+  font-size:12.5px;color:#c8c4bc;padding-bottom:12px;
+  border-bottom:1px solid var(--line);
+}
+.story li svg{width:15px;height:15px;flex:0 0 auto;margin-top:3px;stroke:var(--gold);fill:none;stroke-width:1.6}
+.story li b{display:block;color:var(--ink);font-weight:500;letter-spacing:.04em;font-size:12px;text-transform:uppercase;margin-bottom:2px}
+
+/* ---------- contact ---------- */
+.contact{border-top:1px solid var(--line);padding:46px 0}
+.contact-grid{display:grid;gap:14px;margin-top:24px}
+.cbox{
+  border:1px solid var(--line);padding:18px;
+  display:flex;align-items:center;gap:14px;
+  transition:border-color .3s,background .3s;
+}
+.cbox:hover{border-color:var(--gold);background:rgba(201,168,106,.05)}
+.cbox svg{width:19px;height:19px;stroke:var(--gold);fill:none;stroke-width:1.5;flex:0 0 auto}
+.cbox small{display:block;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.cbox span{font-size:14px;color:var(--ink)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:34px 0 40px;background:#08080a}
+.foot-top{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-start}
+.foot-brand .mark{font-family:"Cormorant Garamond",serif;font-size:20px;letter-spacing:.19em;text-transform:uppercase}
+.foot-brand p{font-size:12px;color:var(--muted);margin-top:8px;max-width:30ch}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.foot-links a:hover{color:var(--gold)}
+.foot-bot{
+  margin-top:28px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:10.5px;color:#57544f;display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between;
+}
+
+/* ---------- mobile bar ---------- */
+.mbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--line);border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.mbar a{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:17px 8px;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;
+  font-weight:500;
+}
+.mbar svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.7}
+.mbar .wa{background:#0f0f12;color:var(--ink)}
+.mbar .sh{background:var(--gold);color:#0b0b0d}
+
+/* ---------- responsive ---------- */
+@media(min-width:600px){
+  :root{--pad:26px}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .hero-strip{grid-template-columns:repeat(4,1fr)}
+  .hero-inner{padding:74px 0 58px}
+  .contact-grid{grid-template-columns:repeat(2,1fr)}
+  body{padding-bottom:0}
+  .mbar{display:none}
+}
+@media(min-width:900px){
+  :root{--pad:40px}
+  .grid{grid-template-columns:repeat(4,1fr)}
+  .hero-inner{padding:104px 0 78px}
+  .hero p.lead{font-size:16px}
+  .story-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .card-body{padding:14px 13px 18px}
+  .card-body h3{font-size:12.5px}
+  .contact-grid{grid-template-columns:repeat(3,1fr)}
+  .toolbar{margin:0}
+}
+@media(min-width:1200px){
+  .grid{grid-template-columns:repeat(5,1fr)}
+  .hero-inner{padding:120px 0 90px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<!-- Bilgi şeridi: dükkan satışa açıldığında silinebilir -->
+<div class="ribbon" id="ribbon">
+  Dükkan şu anda geçici olarak satışa kapalı. Sipariş ve bilgi için <b>WhatsApp</b>: 0545 351 59 34
+  <button onclick="document.getElementById('ribbon').remove()" aria-label="Kapat">
+    <svg width="13" height="13" viewBox="0 0 24 24" stroke="#d8c9a9" fill="none" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+</div>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="ZirveTakı">
+      <span class="mark">ZirveTakı</span>
+      <span class="sub">Erkek Aksesuar</span>
+    </a>
+    <div class="bar-actions">
+      <a class="icon-btn" href="https://www.instagram.com/zirvetaki/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a class="icon-btn" href="https://www.shopier.com/zirvetakiofficial" target="_blank" rel="noopener" aria-label="Shopier mağazası">
+        <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <img src="https://cdn.shopier.app/pictures_mid/zirvetakiofficial_3fe309cd251ee36d2ca75440229aa5c3.jpeg" alt="" aria-hidden="true">
+  </div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">ZirveTakı · Erkek Aksesuar</span>
+    <h1 class="serif">Detay,<br>karakterin<br><em>imzasıdır.</em></h1>
+    <p class="lead">Erkek kol saati, güneş gözlüğü ve aksesuarda seçilmiş parçalar. Her ürün Shopier güvenli ödeme altyapısıyla kapınıza gelir.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="https://www.shopier.com/zirvetakiofficial" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        Shopier'de Alışveriş
+      </a>
+      <a class="btn btn-ghost" href="#koleksiyon">Koleksiyonu Gör</a>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0">
+    <div class="hero-strip">
+      <div><svg viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Hızlı Kargo</div>
+      <div><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6Z"/><path d="m9 12 2 2 4-4"/></svg>Güvenli Ödeme</div>
+      <div><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Orijinal Kutu</div>
+      <div><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-4-.9L3 21l1.9-4.9A8.4 8.4 0 1 1 21 11.5Z"/></svg>WhatsApp Destek</div>
+    </div>
+  </div>
+</section>
+
+<section class="campaign">
+  <div class="wrap campaign-in">
+    <div class="num">200<span style="font-size:18px"> TL</span></div>
+    <div>
+      <h3>Sepette otomatik indirim</h3>
+      <p>2 ve üzeri ürün siparişlerinde 200 TL indirim. Minimum sepet 500 TL.</p>
+    </div>
+  </div>
+</section>
+
+<section class="catalog wrap" id="koleksiyon">
+  <div class="sec-head">
+    <div>
+      <span class="eyebrow">Koleksiyon</span>
+      <h2 class="serif">Seçilmiş parçalar</h2>
+    </div>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="toolbar">
+    <div class="chips" id="chips" role="tablist" aria-label="Kategoriler">
+      <button class="chip" role="tab" aria-selected="true" data-cat="all">Tüm Ürünler</button>
+      <button class="chip" role="tab" aria-selected="false" data-cat="saat">Kol Saatleri</button>
+      <button class="chip" role="tab" aria-selected="false" data-cat="gunes">Güneş Gözlükleri</button>
+      <button class="chip" role="tab" aria-selected="false" data-cat="imaj">İmaj Gözlükleri</button>
+      <button class="chip" role="tab" aria-selected="false" data-cat="aksesuar">Aksesuar</button>
+      <button class="chip" role="tab" aria-selected="false" data-cat="indirim">İndirimli</button>
+      <button class="chip" role="tab" aria-selected="false" data-cat="parfum">Parfüm</button>
+      <button class="chip" role="tab" aria-selected="false" data-cat="bileklik">Bileklik</button>
+      <button class="chip" role="tab" aria-selected="false" data-cat="kolye">Kolye</button>
+    </div>
+    <label class="search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="q" placeholder="Ürün veya kod ara — örn. RLX-120" autocomplete="off">
+    </label>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div id="empty" class="empty" hidden>
+    <p class="serif" style="font-size:22px;color:var(--ink)">Bu kategoride ürün bulunamadı</p>
+    <p>Bu başlıktaki parçalar Shopier'de listelendiğinde burada otomatik görünür.</p>
+  </div>
+  <div class="more" id="moreWrap" hidden>
+    <button class="btn btn-ghost" id="more">Daha Fazla Göster</button>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap story-grid">
+    <div>
+      <span class="eyebrow">ZirveTakı</span>
+      <h2 class="serif">Aksesuar bir tamamlayıcı değil,<br>bir duruş.</h2>
+      <p>ZirveTakı; erkeğin günlük stilinde fark yaratan parçaları tek çatı altında toplar. Saatten gözlüğe, her ürün kullanım konforu ve duruşu birlikte gözetilerek seçilir.</p>
+      <p>Siparişler Shopier üzerinden alınır; ödeme, kargo ve iade süreçleri Shopier güvencesiyle yürür.</p>
+    </div>
+    <ul>
+      <li><svg viewBox="0 0 24 24"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><div><b>Özenle paketleme</b>Her sipariş koruyucu kutu ve kılıfıyla gönderilir.</div></li>
+      <li><svg viewBox="0 0 24 24"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><div><b>Hızlı gönderim</b>Siparişler aynı gün kargoya verilir.</div></li>
+      <li><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-4-.9L3 21l1.9-4.9A8.4 8.4 0 1 1 21 11.5Z"/></svg><div><b>Doğrudan iletişim</b>Ürün ve beden sorularında WhatsApp hattı açık.</div></li>
+      <li><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6Z"/></svg><div><b>Shopier güvencesi</b>Kartla veya kapıda ödeme, 3D Secure altyapısı.</div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact wrap">
+  <span class="eyebrow">İletişim</span>
+  <h2 class="serif" style="font-size:clamp(25px,7vw,36px);margin-top:10px">Bize ulaşın</h2>
+  <div class="contact-grid">
+    <a class="cbox" href="https://wa.me/905453515934" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-4-.9L3 21l1.9-4.9A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+      <div><small>WhatsApp</small><span>0545 351 59 34</span></div>
+    </a>
+    <a class="cbox" href="tel:+905453515934">
+      <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      <div><small>Telefon</small><span>0545 351 59 34</span></div>
+    </a>
+    <a class="cbox" href="mailto:zirvetaki@gmail.com">
+      <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+      <div><small>E-posta</small><span>zirvetaki@gmail.com</span></div>
+    </a>
+  </div>
+  <p style="font-size:12px;color:var(--muted);margin-top:18px">Davutlar Mahallesi, İnönü Caddesi No:3A — DHL Kargo Şubesi</p>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="mark">ZirveTakı</div>
+        <p>Erkek saat, gözlük ve aksesuar. Seçilmiş parçalar, güvenli alışveriş.</p>
+      </div>
+      <nav class="foot-links">
+        <a href="https://www.shopier.com/zirvetakiofficial" target="_blank" rel="noopener">Shopier</a>
+        <a href="https://www.instagram.com/zirvetaki/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/905453515934" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:zirvetaki@gmail.com">E-posta</a>
+      </nav>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yil"></span> ZirveTakı — Tüm hakları saklıdır.</span>
+      <span>Fiyat ve stok bilgileri Shopier mağazasından alınır.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="wa" href="https://wa.me/905453515934" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-4-.9L3 21l1.9-4.9A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+    WhatsApp
+  </a>
+  <a class="sh" href="https://www.shopier.com/zirvetakiofficial" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    Mağazaya Git
+  </a>
+</div>
+
+<script>
+/* =====================================================================
+   ÜRÜN VERİSİ — tamamı Shopier mağazasından (zirvetakiofficial) alındı.
+   Format: [shopierId, ürünKodu, fiyat, eskiFiyat, görselDosyası, kategori, etiket]
+   ===================================================================== */
+const S = "https://www.shopier.com/zirvetakiofficial/";
+const IMG = "https://cdn.shopier.app/pictures_mid/zirvetakiofficial_";
+
+const DATA = [
+["52341772","PTK-153",2299,0,"3fe309cd251ee36d2ca75440229aa5c3.jpeg","saat",""],
+["52341716","PTK-152",2299,0,"9be3ae1b7a5b5a9f701299411acd16ce.jpeg","saat",""],
+["52341661","PTK-151",2299,0,"e4bb0b45ea3456e20fc28f4ef329a6bf.jpeg","saat",""],
+["52331465","PTK-150",2299,0,"a3a832a5b0090299d66210407a9b0ad9.jpeg","saat",""],
+["52330196","PTK-203",1999,0,"5e983a6712e80a9849d4bb89108d502f.jpeg","saat",""],
+["52330393","PTK-202",1999,0,"db3d2c6e2ca543566a4f9f9c9e33beb5.jpeg","saat",""],
+["52330452","PTK-200",1999,0,"7fff614983bb71c73582b044cc00eb9a.jpeg","saat",""],
+["52839785","JCB-01",5999,0,"fd14989a9e3a6c4d6f31d6e87e0c5259.jpeg","saat",""],
+["52907288","PTK-250",1999,0,"6068e4da59d6fab9460f4a333699ba2e.jpeg","saat",""],
+["52832235","FM-06",1999,0,"edbe5cd4b98dccfa23ad2f2df49407d0.jpeg","saat",""],
+["52832166","FM-05",1999,0,"2313a0e18a0f8f12517892d50f5966e4.jpeg","saat",""],
+["52832111","FM-04",1999,0,"049b61919e8af0f0bfda894cc530b4a4.jpeg","saat",""],
+["52743885","FM-03",1999,0,"a62b11f2b1823275392c6a8f8fa203dd.jpeg","saat",""],
+["52743815","FM-02",1999,0,"e24b9a0253c5b0b026321d73ad50e73c.jpeg","saat",""],
+["52967491","LMB-04",1999,0,"7f464113b7d01c2b072bdf838dfe873e.jpeg","saat","Yeni"],
+["52967476","LMB-03",1999,0,"b3e6bc2d089515d21170d0f8c53a58f2.jpeg","saat","Yeni"],
+["52967459","LMB-02",1999,0,"5d00776fff3bb97ac5e2c1b82ba8f72e.jpeg","saat","Yeni"],
+["52967354","LMB-01",1999,0,"7e21e969d2a482ebc4d9f9a64c5d4cbd.jpeg","saat","Yeni"],
+["51544673","RLX-125",1299,0,"e8a1ffadcb00d0a2735554b89d57d42d.jpeg","saat",""],
+["51544752","RLX-124",1299,0,"815ee656a5463e066156d90f9812a6ec.jpeg","saat",""],
+["51544559","RLX-123",1299,0,"1eb4d77743fb86c94f4310ca65552567.jpeg","saat",""],
+["51544848","RLX-122",1299,0,"1d12580d00df179d1e419cb5971b8ea4.jpeg","saat",""],
+["51544934","RLX-121",1299,0,"f6178b322ece32b797a6ead78aeea58a.jpeg","saat",""],
+["51544481","RLX-120",1299,0,"b28f60efbc0b935c2663dd7cb7a13fb4.jpeg","saat",""],
+["50919342","PTK-105",1299,0,"df390489c2f9b63e714437f94842af4b.jpeg","saat",""],
+["50919245","PTK-104",1299,0,"104e40620547d823079fbdf1cb9e3a5c.jpeg","saat",""],
+["50919160","PTK-103",1299,0,"c28bc9528b2f02d0a40fd3df309d1e3b.jpeg","saat",""],
+["50919099","PTK-102",1299,0,"e5082710c80dbcb99ddbfbf24937aa8d.jpeg","saat",""],
+["50918934","PTK-101",1299,0,"5c01f488ff43a13234fc4332bd815813.jpeg","saat",""],
+["50918772","PTK-100",1299,0,"66d1400e990d4f04a4052b6abc5537ca.jpeg","saat",""],
+["50964641","RLX-105",1299,0,"947b5b2e7a80f4dba0cf6e72e4a302ec.jpeg","saat",""],
+["50964630","RLX-104",1299,0,"70ef42504cff1ac4f9b68617c411f02c.jpeg","saat",""],
+["50964610","RLX-103",1299,0,"0c7099353a30837d64010ceffc84cc06.jpeg","saat",""],
+["50964568","RLX-102",1299,0,"03289ede446f0674b4dc411058ef15a8.jpeg","saat",""],
+["50964550","RLX-101",1299,0,"d177ad470431a53b06f765df71c5510e.jpeg","saat",""],
+["50964527","RLX-100",1299,0,"001b000855a543d2eb66294b73eb3c20.jpeg","saat",""],
+["51257822","RLX-107",1299,0,"3ed065a6c9193eb8167fbfea75357ea1.jpeg","saat",""],
+["52439764","TSS-12",1299,0,"17052c298ff46ef1a66a9809eaae54e9.jpeg","saat",""],
+["52440147","TSS-13",1299,0,"238598b908a4a2d8ce6a01f75d9107fb.jpeg","saat",""],
+["52440242","TSS-11",1299,0,"7c878b56d67c64566cfa3ba2f582b371.jpeg","saat",""],
+["52440187","TSS-14",1299,0,"c0915258b647166a17bce5ac0cdd6308.jpeg","saat",""],
+["52440327","TSS-10",1299,0,"125743e2a7cd9c5895278cff749b2140.jpeg","saat",""],
+["52440408","TSS-15",1299,0,"95b81783a42ccdb284145c77ea5fdb9d.jpeg","saat",""],
+["52326507","PTK-125",1299,0,"85846b6f9b7229b09e31a79054412a6f.jpeg","saat",""],
+
+["52438949","SF-04",1299,0,"06a941b20e50bd2900cc81393399baa6.jpeg","gunes",""],
+["52439064","SF-03",1299,0,"c9faca573ed2831ebffae06da5254bb5.jpeg","gunes",""],
+["52439102","SF-02",1299,0,"61657c355e780dbe1d40fffdb015d283.jpeg","gunes",""],
+["52439025","SF-01",1299,0,"9c29c6f9affec9971f75a153d59c26a4.jpeg","gunes",""],
+["43898240","RB-22",1299,0,"ff80672b943ad1bf5429ce38f76f3cb5.webp","gunes",""],
+["43898193","RB-21",1299,0,"edb053362c6efe4532ccc7a586156fea.webp","gunes",""],
+["43898154","RB-20",1299,0,"b3551241933b6718ce248591f3bbf173.webp","gunes",""],
+["43898270","RB-23",1200,0,"1565298fd410490089db6a389675e7f9.webp","gunes",""],
+["48635465","RB-24",1299,0,"78350cc3559322c8acf34448082eafa7.jpeg","gunes",""],
+["43898536","RB-25",1299,0,"720807dc5cdd0b18bc025628b8b66eec.webp","gunes",""],
+["50015730","RB-18",1299,0,"716b76b5e78097b251e3d3fab3967e75.jpeg","gunes",""],
+["49187167","RB-26",1200,0,"4c07ba1fe5ceea75241fbd4e0d0e4bc5.jpeg","gunes",""],
+["43898036","RB-46",1200,0,"f48b724e8c3b2a0be2879e4df42fb44f.webp","gunes",""],
+["43898483","FG-03",1200,0,"42dd10845a410f6a2b255378c4c3a4b1.webp","gunes",""],
+["48945659","ROS-02",1299,1479,"e935e4187c162c6b8ba8697df019d243.jpeg","gunes","%12"],
+["49701080","ROS-05",1299,1479,"e46df0acab00f634e8fa4572a2b45949.jpeg","gunes","%12"],
+["48945710","ROS-03",1299,1479,"b9e3b7d67690e90a7b8f974e8d24e5eb.jpeg","gunes","%12"],
+["48945505","ROS-01",1299,1479,"d322b1c84699eef7c93c603feb32ca6a.jpeg","gunes","%12"],
+["48947509","ROS-04",1299,1479,"61e76002318594c4fee5312021c74b76.jpeg","gunes","%12"],
+["50590057","ROS-07",1299,1479,"22a7220ffedd3097cfdfae052b3e5608.jpeg","gunes","%12"],
+["49440541","ETG-01",1299,0,"f2c393a5f71f47a7420c277dc3ec35a6.jpg","gunes",""],
+["49440676","ETG-03",1299,0,"ad8afe85255e1a70cc82e9b71e54358e.jpg","gunes",""],
+["49440630","ETG-02",1299,0,"52ed3ecc66bdfed6e6651d9ca447527a.jpg","gunes",""],
+["50080155","ARM-03",1299,0,"39f533b50d05937025d8e21cbf6413d6.jpeg","gunes","Son ürün"],
+
+["52788268","SP-01",1299,0,"de5ebd403e0b22b6ba7e7cbfb83a128d.jpeg","imaj",""],
+
+["50150786","RB-KILIF",799,0,"12a4193401453e95dbfea9a114a1ed76.jpeg","aksesuar",""],
+["49701339","RB-SET",999,0,"268284fe75bcbe636ad23fc0bcfd96cf.jpeg","aksesuar",""],
+["50017619","SURPRIZ",3500,6500,"e9ff91ff8054301ae3d3f6b855de4eb0.jpeg","aksesuar","%46"]
+];
+
+const AD = { saat:"Erkek Kol Saati", gunes:"Erkek Güneş Gözlüğü", imaj:"Erkek İmaj Gözlüğü", aksesuar:"Aksesuar" };
+const tl = n => n.toLocaleString("tr-TR") + " TL";
+const grid = document.getElementById("grid");
+const empty = document.getElementById("empty");
+const moreWrap = document.getElementById("moreWrap");
+const countEl = document.getElementById("count");
+
+let cat = "all", q = "", shown = 24;
+
+const list = () => DATA.filter(p => {
+  const catOk = cat === "all" ? true
+    : cat === "indirim" ? p[3] > 0
+    : cat === "parfum" || cat === "bileklik" || cat === "kolye" ? false
+    : p[5] === cat;
+  const qOk = !q || p[1].toLowerCase().includes(q) || (AD[p[5]] || "").toLowerCase().includes(q);
+  return catOk && qOk;
+});
+
+function card(p, i){
+  const [id, code, price, old, file, c, tag] = p;
+  const a = document.createElement("a");
+  a.className = "card";
+  a.href = S + id;
+  a.target = "_blank";
+  a.rel = "noopener";
+  a.style.animationDelay = Math.min(i, 12) * 22 + "ms";
+  a.innerHTML = `
+    <div class="thumb">
+      ${tag ? `<span class="badge${tag === "Yeni" || tag === "Son ürün" ? " dark" : ""}">${tag === "Yeni" || tag === "Son ürün" ? tag : tag + " İndirim"}</span>` : ""}
+      <img src="${IMG}${file}" alt="${AD[c] || "Ürün"} ${code}" loading="lazy" decoding="async">
+    </div>
+    <div class="card-body">
+      <h3>${AD[c] || "Ürün"} · ${code}</h3>
+      <div class="price">
+        <span class="now">${tl(price)}</span>
+        ${old ? `<span class="old">${tl(old)}</span>` : ""}
+      </div>
+      <span class="go">Shopier'de Gör
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </div>`;
+  return a;
+}
+
+function render(){
+  const rows = list();
+  grid.innerHTML = "";
+  countEl.textContent = rows.length + " ürün";
+  empty.hidden = rows.length > 0;
+  rows.slice(0, shown).forEach((p, i) => grid.appendChild(card(p, i)));
+  moreWrap.hidden = rows.length <= shown;
+  grid.style.display = rows.length ? "grid" : "none";
+}
+
+document.getElementById("chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  [...document.querySelectorAll(".chip")].forEach(c => c.setAttribute("aria-selected", c === b));
+  cat = b.dataset.cat; shown = 24; render();
+});
+
+let t;
+document.getElementById("q").addEventListener("input", e => {
+  clearTimeout(t);
+  t = setTimeout(() => { q = e.target.value.trim().toLowerCase(); shown = 24; render(); }, 180);
+});
+
+document.getElementById("more").addEventListener("click", () => { shown += 24; render(); });
+document.getElementById("yil").textContent = new Date().getFullYear();
+
+render();
+</script>
+</body>
+</html>
